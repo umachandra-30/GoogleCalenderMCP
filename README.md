@@ -62,6 +62,6 @@ If your calendar is **private**, the server will not be able to retrieve event d
 -  Read private calendars
 -  Create calendar events
 -  Update calendar events
-- ❌ Delete calendar events
+-  Delete calendar events
 
 For full Google Calendar functionality, OAuth 2.0 authentication is recommended.
