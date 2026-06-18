@@ -49,7 +49,7 @@ After saving the configuration, restart Cursor (if required). Your MCP server wi
 
 ---
 
-## ⚠️ Important Note
+##  Important Note
 
 This project currently uses a **Google Calendar API Key**, which can only access **public Google Calendars**.
 
@@ -57,11 +57,11 @@ If your calendar is **private**, the server will not be able to retrieve event d
 
 ### Current Features (API Key)
 
-- ✅ Read events from public Google Calendars
-- ✅ Retrieve events by date
-- ❌ Read private calendars
-- ❌ Create calendar events
-- ❌ Update calendar events
+-  Read events from public Google Calendars
+-  Retrieve events by date
+-  Read private calendars
+-  Create calendar events
+-  Update calendar events
 - ❌ Delete calendar events
 
 For full Google Calendar functionality, OAuth 2.0 authentication is recommended.
