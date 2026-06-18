@@ -67,8 +67,6 @@ If your calendar is **private**, the server will not be able to retrieve event d
 For full Google Calendar functionality, OAuth 2.0 authentication is recommended.
 ## 📚 Resources
 
-To learn more about building MCP servers with TypeScript, check out the following guide:
+For a detailed guide on building custom MCP servers with TypeScript, check out the following article:
 
-- :contentReference[oaicite:0]{index=0}
-
-This article provides a comprehensive introduction to the Model Context Protocol (MCP), explains its core concepts, and walks through the process of building a custom MCP server from scratch using TypeScript. :contentReference[oaicite:1]{index=1}
+- [How to Build a Custom MCP Server with TypeScript – A Handbook for Developers](https://www.freecodecamp.org/news/how-to-build-a-custom-mcp-server-with-typescript-a-handbook-for-developers/)
