@@ -65,7 +65,7 @@ If your calendar is **private**, the server will not be able to retrieve event d
 -  Delete calendar events
 
 For full Google Calendar functionality, OAuth 2.0 authentication is recommended.
-## 📚 Resources
+##  Resources
 
 For a detailed guide on building custom MCP servers with TypeScript, check out the following article:
 
