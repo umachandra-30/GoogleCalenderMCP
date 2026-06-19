@@ -1,5 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import express from "express";
+import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import dotenv from "dotenv";
 import { google } from "googleapis";
 import { z } from "zod";
@@ -77,11 +78,36 @@ server.tool(
     }
 );
 
-// set transport
-async function init() {
-    const transport = new StdioServerTransport();
-    await server.connect(transport);
-}
+const app = express();
 
-// call the initialization
-init();
+app.use(express.json());
+
+app.post("/mcp", async (req, res) => {
+    try {
+
+        const transport = new StreamableHTTPServerTransport({
+            sessionIdGenerator: undefined
+        });
+
+        await server.connect(transport);
+
+        await transport.handleRequest(req, res, req.body);
+
+    } catch (err) {
+
+        console.error(err);
+
+        if (!res.headersSent) {
+            res.status(500).json({
+                error: "Internal Server Error"
+            });
+        }
+
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Remote MCP Server running on port ${PORT}`);
+});
